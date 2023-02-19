@@ -4,7 +4,9 @@
 <head>
     <title>Registration </title>
     <link rel="stylesheet" href="sytle.css">
-    <link rel="javascript" href="myJs.js">
+    <script type="text/javascript" src="myJs.js"></script>
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
@@ -14,7 +16,7 @@
     <div class="form">
         <h1>Registration Form</h1>
 
-        <form>
+        <form name="reg_form">
             <div>
                 <label for="fname">First Name:</label>
                 <br>
@@ -41,6 +43,7 @@
                 <label for="password">Password:</label>
                 <br>
                 <input type="password" id="password" name="password">
+                <p id="error_p"></p>
             </div>
             <div>
                 <label for="DOB">Date of Birth:</label>
@@ -68,13 +71,14 @@
                 <textarea name="address" id="address" cols="24" rows="5"></textarea>
             </div>
 
-            <input type="submit">
+            <input type="submit" onclick="checkAge()">
             <input type="reset">
 
 
            
         </form>
     </div>
+
 
     
 </body>
